@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="icon.png">
+        <title> Building Blocks </title>
+        <style> 
+            body{
+                font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f3f4f6;
+            }
+            h1{
+            color: #333
+            }
+            .container {
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        #grid {
+            display: grid;
+            grid-template-columns: repeat(10, 50px);
+            grid-template-rows: repeat(10, 50px);
+            gap: 5px;
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .grid-cell {
+            width: 50px;
+            height: 50px;
+            background-color: #c1c1c1;
+            border: 1px solid #888;
+            cursor: pointer;
+        }
+
+        .sanctuary {
+            background-color: #66bbf3;
+        }
+
+        .poaching-block {
+            background-color: #ff7043;
+        }
+
+        .tree {
+            background-color: #388e3c;
+        }
+
+        .button {
+            background-color: #00796b;
+            color: white;
+            padding: 15px 30px;
+            border: none;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 10px;
+            border-radius: 5px;
+        }
+
+        .button:hover {
+            background-color: #004d40;
+        }
+
+        #info {
+            font-size: 20px;
+            color: #333;
+        }
+        .home{
+            height:50px;
+    font-size:1.2em;
+    color:white;
+    background-color:blue;
+    cursor:pointer;
+        }
+        </style>
+    </head>
+    <body>
+        <h1>Build Your Solution to Save Endangered Species</h1>
+        <div class="container">
+            <button class="button" onclick="changeBlock('sanctuary')">Build Sanctuary</button>
+            <button class="button" onclick="changeBlock('poaching-block')">Build Anti-Poaching Block</button>
+            <button class="button" onclick="changeBlock('tree')">Plant Tree</button>
+    
+            <div id="info">Click on the grid to place blocks and create your solution!</div>
+    
+            <div id="grid"></div>
+        </div>
+    
+        <script>
+           
+           let grid = [];
+        let currentBlock = 'sanctuary'; 
+        function createGrid() {
+            const gridElement = document.getElementById("grid");
+            for (let i = 0; i < 100; i++) {
+                const cell = document.createElement("div");
+                cell.classList.add("grid-cell");
+                cell.setAttribute("data-index", i);
+                cell.addEventListener("click", placeBlock);
+                grid.push(cell);
+                gridElement.appendChild(cell);
+            }
+        }
+
+       
+        function changeBlock(blockType) {
+            currentBlock = blockType;
+            document.getElementById("info").innerText = `Current Block: ${capitalizeFirstLetter(currentBlock)}. Click to place on the grid.`;
+        }
+
+       
+        function placeBlock(event) {
+            const cell = event.target;
+            if (currentBlock === 'sanctuary') {
+                cell.classList.add('sanctuary');
+            } else if (currentBlock === 'poaching-block') {
+                cell.classList.add('poaching-block');
+            } else if (currentBlock === 'tree') {
+                cell.classList.add('tree');
+            }
+        }
+
+        
+        function capitalizeFirstLetter(string) {
+            return string.charAt(0).toUpperCase() + string.slice(1);
+        }
+
+    
+        createGrid();
+    </script> 
+    <button class="home" onclick="buttonclick()"> Home </button>
+    <script>
+    function buttonclick(){
+    window.location.href = "codequest.html";
+    }
+    </script>
+    <button class="button" onclick="clearGrid()"> Clear </button>
+
+    <script> 
+        function clearGrid() {
+            grid.forEach(cell => {
+                cell.classList.remove('sanctuary', 'poaching-block', 'tree');
+            });
+            document.getElementById("info").innerText = "Grid cleared! Choose an action and start building.";
+        }
+
+    </script>
+    </body>
+</html>

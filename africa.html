@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
+    <title>Endangered Species in Africa</title>
+    <style> 
+        body {
+            background-image: url("https://wildlifesos.org/wp-content/uploads/2022/04/biodiversity_rainforest_wikimedia_commons_rep_photo-1920x900.jpg");
+            color: rgb(255, 0, 0);
+            font-family: Arial, sans-serif;
+            margin-left: 220px;
+        }
+        img {
+            width: 1000px; 
+            height: 669px;
+        }
+        button {
+            height: 50px;
+            font-size: 1.2em;
+            color: white;
+            background-color: blue;
+            cursor: pointer;
+            text-align:center;
+        }
+        h1 {
+            color: white;
+            font-size: 40px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            padding-top: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding-left: 20px;
+        }
+        .sidebar h2 {
+            color: white;
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            display: block;
+        }
+        .sidebar ul li a:hover {
+            background-color: white;
+            color: black;
+        }
+        .content {
+            margin-left: 220px; 
+            padding: 20px;
+            font-size:18px;
+        }
+        p{
+        background-color:yellow;
+        color:purple;
+        margin:50px;
+        margin-right:100px;
+        font-size:16.69px;
+       }
+       .images{
+       background-color:lightskyblue;
+       justify-content:center;
+    align-items:center;
+       }
+       img{
+       height:150px;
+       width:150px;
+       border-width:20px;
+       border-style:groove;
+       }
+    </style>
+</head>
+<body> 
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="speciescurrentlydangered.html">Top 5 Species Currently Endangered</a></li>
+            <li><a href="Buildingthesolution.html">Build Your Own Solution</a></li>
+            <li><a href="survey.html">A Survey</a></li>
+            
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1> Endangered Species in Africa </h1>
+        <p>Welcome to the page dedicated to endangered species in Africa. You can navigate through various sections using the sidebar on the left.
+            Here is a <strong> Gallery </strong>
+        </p>
+        <center>
+        <div class="images">
+            <img src="https://files.worldwildlife.org/wwfcmsprod/images/HERO_Mountain_Gorilla_Silverback_WW22557/hero_small/17l7fosr27_Mountain_Gorilla_Silverback_WW22557.jpg">
+            <p> Mountain Gorilla </p>
+
+            <img src="https://i.natgeofe.com/n/16fc1c64-7589-46da-8350-aa3b01da2152/3961779_square.jpg">
+            <p> African Elephant </p>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRRpJNkorZTTbqQrZqhq8wXD82n79athrF1Ew&s">
+            <p> Black Rhinoceros </p>
+        </center> 
+            <center> <p id="Info"> The Info Here </p></center>
+           </div>
+           </div>
+            <center> 
+          <button onclick="buttonclick()"> Mountain Gorilla </button>
+          <button onclick="buttonclickaswell()"> African Elephant </button>
+          <button onclick="buttonclicktoo()"> Black Rhino </button>
+          <button onclick="buttonclear()"> Clear </button>
+          <button onclick="buttonback()"> Home </button>
+            </center>
+          <script> 
+            function buttonclick(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The Mountain Gorilla (*Gorilla beringei beringei*) is one of the world's most endangered primates, with only about 1,000 individuals remaining. Native to the forests of the Virunga Mountains in Rwanda, Uganda, and the Democratic Republic of Congo, it faces critical threats from habitat loss, poaching, and disease transmission from humans. These herbivorous primates primarily feed on leaves, stems, and fruits, playing a significant role in seed dispersal and forest health. The Mountain Gorilla's natural habitat includes dense tropical forests and bamboo forests at high altitudes. Conservation efforts, including anti-poaching measures and habitat restoration, have contributed to a slow recovery in recent years.";
+
+            }
+            function buttonclickaswell(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The African Elephant (*Loxodonta africana*) is the largest land mammal, found across sub-Saharan Africa in savannas, forests, and deserts. It is classified as vulnerable due to threats from poaching for ivory, habitat loss, and human-wildlife conflict. African elephants are herbivores and play a key role in maintaining the ecosystem by dispersing seeds, creating water holes, and shaping the landscape. They help maintain biodiversity by influencing plant and tree populations. The African elephants natural habitat includes grasslands, forests, and wetlands. Conservation efforts focus on anti-poaching laws, protecting their habitats, and reducing human-elephant conflict to ensure their survival.";
+            
+            }
+            function buttonclicktoo(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The Black Rhinoceros (*Diceros bicornis*) is a critically endangered species found in parts of eastern and southern Africa, including Kenya, Tanzania, and South Africa. It faces severe threats from poaching for its horn and habitat loss due to human encroachment and agriculture. Black rhinos are herbivores, primarily feeding on shrubs and bushes, and play a crucial role in maintaining the structure of their ecosystem by controlling vegetation growth. Their natural habitat includes savannas, grasslands, and woodlands. Conservation efforts, such as anti-poaching measures, habitat protection, and translocation programs, aim to protect the remaining population and prevent extinction.";
+
+            }
+            function buttonclear(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The info here "
+            }
+            function buttonback(){
+            window.location.href = "codequest.html"
+            }
+          </script>
+          </body> 
+        </html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png"> 
+    <title>Endangered Species Dodge Game</title>
+    <style>
+        body {
+            background-color: #f0f8ff;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        h1 {
+            font-size: 2em;
+        }
+        #gameCanvas {
+            background-color: #e5e5e5;
+            display: block;
+            margin: 20px auto;
+            border: 2px solid black;
+        }
+        #score {
+            font-size: 20px;
+            color: #333;
+            margin: 10px 0;
+        }
+        .button{
+            height:50px;
+    font-size:1.2em;
+    color:white;
+    background-color:blue;
+    cursor:pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>Endangered Species Dodge Game</h1>
+    <p> The rules are simple. Last as long as you can without hitting the endangered species <br>
+    Using your "up" arrow key to move up, "down" for down, "left" for left and "right" for right. <strong> Enjoy!</strong></p>
+    <div id="score">Score: 10</div>
+    <canvas id="gameCanvas" width="600" height="450"></canvas>
+
+    <script>
+        const canvas = document.getElementById("gameCanvas");
+        const ctx = canvas.getContext("2d");
+        let player, endangeredSpecies, score, gameInterval, spawnInterval, keys;
+        function initGame() {
+            player = new Player(50, 200, 30, 30, 10);
+            endangeredSpecies = [];
+            score = 10; // Starting score
+            keys = { up: false, down: false, left: false, right: false };
+            updateScore();
+        }
+        class Player {
+            constructor(x, y, width, height, speed) {
+                this.x = x;
+                this.y = y;
+                this.width = width;
+                this.height = height;
+                this.speed = speed;
+            }
+            draw() {
+                ctx.fillStyle = 'green';
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+            }
+            move() {
+                if (keys.up && this.y > 0) this.y -= this.speed;
+                if (keys.down && this.y + this.height < canvas.height) this.y += this.speed;
+                if (keys.left && this.x > 0) this.x -= this.speed;
+                if (keys.right && this.x + this.width < canvas.width) this.x += this.speed;
+            }
+        }
+        class EndangeredSpecies {
+            constructor(x, y, width, height, speed) {
+                this.x = x;
+                this.y = y;
+                this.width = width;
+                this.height = height;
+                this.speed = speed;
+            }
+            draw() {
+                ctx.fillStyle = 'red';
+                ctx.fillRect(this.x, this.y, this.width, this.height);
+            }
+            move() {
+                this.x -= this.speed;
+            }
+        }
+        function spawnEndangeredSpecies() {
+            const x = canvas.width;
+            const y = Math.random() * (canvas.height - 30);
+            endangeredSpecies.push(new EndangeredSpecies(x, y, 30, 30, 8));
+        }
+        function detectCollisions() {
+            endangeredSpecies.forEach((species, index) => {
+                if (
+                    player.x < species.x + species.width &&
+                    player.x + player.width > species.x &&
+                    player.y < species.y + species.height &&
+                    player.y + player.height > species.y
+                ) {
+                    score -= 1; 
+                    endangeredSpecies.splice(index, 1); 
+                    updateScore();
+                }
+            });
+        }
+        function updateScore() {
+            document.getElementById("score").innerText = `Score: ${score}`;
+        }
+        function gameLoop() {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            player.move();
+            player.draw();
+            endangeredSpecies.forEach(species => {
+                species.move();
+                species.draw();
+            });
+            detectCollisions();
+            if (score <= 0) gameOver();
+        }
+        function startGame() {
+            spawnInterval = setInterval(spawnEndangeredSpecies, 2050);
+            gameInterval = setInterval(gameLoop, 1000 / 62); // 62 FPS
+        }
+        function gameOver() {
+            clearInterval(gameInterval);
+            clearInterval(spawnInterval);
+            alert(`Game Over! Your final score is ${score}`);
+            resetGame();
+        }
+        function resetGame() {
+            initGame();
+            startGame();
+        }
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowUp') keys.up = true;
+            if (e.key === 'ArrowDown') keys.down = true;
+            if (e.key === 'ArrowLeft') keys.left = true;
+            if (e.key === 'ArrowRight') keys.right = true;
+        });
+        document.addEventListener('keyup', (e) => {
+            if (e.key === 'ArrowUp') keys.up = false;
+            if (e.key === 'ArrowDown') keys.down = false;
+            if (e.key === 'ArrowLeft') keys.left = false;
+            if (e.key === 'ArrowRight') keys.right = false;
+        });
+        initGame();
+        startGame();
+    </script>
+    <button class="button" onclick="buttonclick()"> Home </button>
+    <script> 
+        function buttonclick(){
+        window.location.href = "mainmenu.html"
+        }
+    </script>
+</body>
+</html>

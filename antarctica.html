@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
+    <title>Endangered Species in Antarctica </title>
+    <style> 
+        body {
+            background-image: url("https://wildlifesos.org/wp-content/uploads/2022/04/biodiversity_rainforest_wikimedia_commons_rep_photo-1920x900.jpg");
+            color: rgb(255, 0, 0);
+            font-family: Arial, sans-serif;
+            margin-left: 220px;
+        }
+        img {
+            width: 1000px; 
+            height: 669px;
+        }
+        button {
+            height: 50px;
+            font-size: 1.2em;
+            color: white;
+            background-color: blue;
+            cursor: pointer;
+            text-align:center;
+        }
+        h1 {
+            color: white;
+            font-size: 40px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            padding-top: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding-left: 20px;
+        }
+        .sidebar h2 {
+            color: white;
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            display: block;
+        }
+        .sidebar ul li a:hover {
+            background-color: white;
+            color: black;
+        }
+        .content {
+            margin-left: 220px; 
+            padding: 20px;
+            font-size:18px;
+        }
+        p{
+        background-color:yellow;
+        color:purple;
+        margin:50px;
+        margin-right:100px;
+        font-size:16.69px;
+       }
+       .images{
+       background-color:lightskyblue;
+       justify-content:center;
+    align-items:center;
+       }
+       img{
+       height:150px;
+       width:150px;
+       border-width:20px;
+       border-style:groove;
+       }
+    </style>
+</head>
+<body> 
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="speciescurrentlydangered.html">Top 5 Species Currently Endangered</a></li>
+            <li><a href="Buildingthesolution.html">Build Your Own Solution</a></li>
+            <li><a href="survey.html">A Survey</a></li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1> Endangered Species in Antarctica  </h1>
+        <p>Welcome to the page dedicated to endangered species in Antarctica. You can navigate through various sections using the sidebar on the left.
+            Here is a <strong> Gallery </strong>
+        </p>
+        <center>
+        <div class="images">
+            <img src="https://cdn.britannica.com/74/76374-050-CCBBC3CE/Emperor-penguins.jpg">
+              <p> Emperor Penguin </p>
+              
+            <img src="https://upload.wikimedia.org/wikipedia/commons/9/9d/Dmawsoni_Head_shot.jpg">
+            <p> Antarctic Toothfish </p>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYr9xyY6JPshqFvoACLI5bpuaQvX2_TywAsg&s">
+            <p> Weddell seal</p>
+        </center> 
+            <center> <p id="Info"> The Info Here </p></center>
+           </div>
+           </div>
+            <center> 
+          <button onclick="buttonclick()"> Emporor Penguin </button>
+          <button onclick="buttonclickaswell()"> Antarctic Toothfish  </button>
+          <button onclick="buttonclicktoo()"> Weddell Seal  </button>
+          <button onclick="buttonclear()"> Clear </button>
+          <button onclick="buttonback()"> Home </button>
+            </center>
+          <script> 
+            function buttonclick(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The Emperor Penguin is the largest penguin species, found in Antarctica. They face threats from climate change, particularly the melting of sea ice, which impacts their breeding and access to food. These penguins are carnivorous, feeding on fish, krill, and squid. Their natural habitat includes the icy coastal regions of Antarctica. Conservation efforts focus on protecting their habitat and monitoring population changes due to climate variability.";
+            }
+            function buttonclickaswell(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The Antarctic Toothfish is a deep-water fish found around Antarctica, particularly near the South Pole. It faces threats from illegal fishing and overfishing. The toothfish is an important part of the Antarctic food chain, serving as prey for larger predators like seals and whales. Its natural habitat includes the cold, deep waters of the Southern Ocean. Efforts to protect this species include sustainable fishing practices and stricter regulations against illegal fishing.";
+            
+            }
+            function buttonclicktoo(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The Weddell Seal is one of the most common seals found in Antarctica. It is vulnerable to climate change, which affects the availability of its prey and ice habitats. These seals primarily feed on fish and squid. Their natural habitat includes sea ice regions in Antarctica, where they breed and haul out. Conservation efforts focus on understanding the impacts of climate change on their populations and ensuring they have access to ice-covered regions for breeding.";
+
+            }
+            function buttonclear(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The info here "
+            }
+            function buttonback(){
+            window.location.href = "codequest.html"
+            }
+          </script>
+          </body> 
+        </html>

@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
+    <title>Endangered Species in Oceania </title>
+    <style> 
+        body {
+            background-image: url("https://wildlifesos.org/wp-content/uploads/2022/04/biodiversity_rainforest_wikimedia_commons_rep_photo-1920x900.jpg");
+            color: rgb(255, 0, 0);
+            font-family: Arial, sans-serif;
+            margin-left: 220px;
+        }
+        img {
+            width: 1000px; 
+            height: 669px;
+        }
+        button {
+            height: 50px;
+            font-size: 1.2em;
+            color: white;
+            background-color: blue;
+            cursor: pointer;
+            text-align:center;
+        }
+        h1 {
+            color: white;
+            font-size: 40px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            padding-top: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding-left: 20px;
+        }
+        .sidebar h2 {
+            color: white;
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            display: block;
+        }
+        .sidebar ul li a:hover {
+            background-color: white;
+            color: black;
+        }
+        .content {
+            margin-left: 220px; 
+            padding: 20px;
+            font-size:18px;
+        }
+        p{
+        background-color:yellow;
+        color:purple;
+        margin:50px;
+        margin-right:100px;
+        font-size:16.69px;
+       }
+       .images{
+       background-color:lightskyblue;
+       justify-content:center;
+    align-items:center;
+       }
+       img{
+       height:150px;
+       width:150px;
+       border-width:20px;
+       border-style:groove;
+       }
+    </style>
+</head>
+<body> 
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="speciescurrentlydangered.html">Top 5 Species Currently Endangered</a></li>
+            <li><a href="Buildingthesolution.html">Build Your Own Solution</a></li>
+            <li><a href="survey.html">A Survey</a></li>
+            
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1> Endangered Species in Oceania</h1>
+        <p>Welcome to the page dedicated to endangered species in Oceania. You can navigate through various sections using the sidebar on the left.
+            Here is a <strong> Gallery </strong>
+        </p>
+        <center>
+        <div class="images">
+            <img src="https://earth.org/wp-content/uploads/2022/04/Untitled-design-2022-04-12T161151.368.jpg">
+              <p> Vaquita </p>
+              
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRYsG7T9Llt3EKxs748jIDWW68fM2_tPqoRvQ&s">
+            <p> Kakapo </p>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRV4VIllNN694xVvh7hFNx5X1hOHy_W78GUOg&s">
+            <p> Hawksbill Turtle</p>
+        </center> 
+            <center> <p id="Info"> The Info Here </p></center>
+           </div>
+           </div>
+            <center> 
+          <button onclick="buttonclick()"> Vaquita </button>
+          <button onclick="buttonclickaswell()"> Kakapo  </button>
+          <button onclick="buttonclicktoo()"> Hawksbill Turtle </button>
+          <button onclick="buttonclear()"> Clear </button>
+          <button onclick="buttonback()"> Home </button>
+            </center>
+          <script> 
+            function buttonclick(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The Vaquita is a small, endangered porpoise found in the northern part of the Gulf of California, Mexico. It faces the threat of extinction due to bycatch in illegal gillnets used for fishing totoaba, a fish sought for its swim bladder. Vaquitas are primarily carnivorous, feeding on small fish and squid. Their natural habitat includes shallow waters along the coast. Efforts to save the vaquita include banning illegal fishing and using alternative fishing methods.";
+            }
+            function buttonclickaswell(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The Kakapo is a flightless parrot native to New Zealand. It faces threats from predation by introduced species, such as rats, stoats, and cats. This nocturnal, herbivorous bird feeds on fruits, seeds, and leaves. Its natural habitat includes forests and scrublands. Conservation efforts include captive breeding and island sanctuaries to protect the kakapo from predators. There are currently fewer than 250 individuals left in the wild.";
+            
+            }
+            function buttonclicktoo(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The Hawksbill Turtle is found in the warm, tropical waters of the Pacific and Indian Oceans, including parts of Oceania. It faces threats from habitat loss (especially coral reefs), illegal trade of its shell, and entanglement in fishing gear. Hawksbill turtles are carnivorous, feeding mainly on sponges and other marine invertebrates. Their natural habitat includes coral reefs and coastal areas. Conservation efforts focus on protecting nesting sites, reducing illegal trade, and promoting sustainable fishing practices.";
+
+            }
+            function buttonclear(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The info here "
+            }
+            function buttonback(){
+            window.location.href = "codequest.html"
+            }
+          </script>
+          </body> 
+        </html>

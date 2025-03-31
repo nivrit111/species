@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
+    <title>Endangered Species in North America </title>
+    <style> 
+        body {
+            background-image: url("https://wildlifesos.org/wp-content/uploads/2022/04/biodiversity_rainforest_wikimedia_commons_rep_photo-1920x900.jpg");
+            color: rgb(255, 0, 0);
+            font-family: Arial, sans-serif;
+            margin-left: 220px;
+        }
+        img {
+            width: 1000px; 
+            height: 669px;
+        }
+        button {
+            height: 50px;
+            font-size: 1.2em;
+            color: white;
+            background-color: blue;
+            cursor: pointer;
+            text-align:center;
+        }
+        h1 {
+            color: white;
+            font-size: 40px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            padding-top: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding-left: 20px;
+        }
+        .sidebar h2 {
+            color: white;
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            display: block;
+        }
+        .sidebar ul li a:hover {
+            background-color: white;
+            color: black;
+        }
+        .content {
+            margin-left: 220px; 
+            padding: 20px;
+            font-size:18px;
+        }
+        p{
+        background-color:yellow;
+        color:purple;
+        margin:50px;
+        margin-right:100px;
+        font-size:16.69px;
+       }
+       .images{
+       background-color:lightskyblue;
+       justify-content:center;
+    align-items:center;
+       }
+       img{
+       height:150px;
+       width:150px;
+       border-width:20px;
+       border-style:groove;
+       }
+    </style>
+</head>
+<body> 
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="speciescurrentlydangered.html">Top 5 Species Currently Endangered</a></li>
+            <li><a href="Buildingthesolution.html">Build Your Own Solution</a></li>
+            <li><a href="survey.html">A Survey</a></li>
+        
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1> Endangered Species in North America  </h1>
+        <p>Welcome to the page dedicated to endangered species in North America. You can navigate through various sections using the sidebar on the left.
+            Here is a <strong> Gallery </strong>
+        </p>
+        <center>
+        <div class="images">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS6_vAKAdPQov8V6iZwo71xxeO6G5uxHeSXUg&s">
+              <p> California Condor </p>
+              
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxOVcFVFKaL1TWOWEak3iDJU9-6gjUk5RmqQ&s">
+            <p> North Atlantic Right Whale </p>
+
+            <img src="https://cdn.britannica.com/07/5207-050-5BC9F251/Gray-wolf.jpg">
+            <p> Gray Wolf </p>
+        </center> 
+            <center> <p id="Info"> The Info Here </p></center>
+           </div>
+           </div>
+            <center> 
+          <button onclick="buttonclick()"> California Condor  </button>
+          <button onclick="buttonclickaswell()"> North Atlantic Right Whale  </button>
+          <button onclick="buttonclicktoo()"> Gray wolf  </button>
+          <button onclick="buttonclear()"> Clear </button>
+          <button onclick="buttonback()"> Home </button>
+            </center>
+          <script> 
+            function buttonclick(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The California Condor is one of the world's rarest birds, with fewer than 500 individuals remaining. Found in parts of California, Utah, and Arizona, it faces threats from lead poisoning, habitat destruction, and food scarcity. As scavengers, they play an important role in the ecosystem by cleaning up carcasses. Their natural habitat includes open and mountainous regions. Intensive conservation efforts, including captive breeding programs and reintroductions into the wild, have helped the species make a gradual recovery.";
+
+            }
+            function buttonclickaswell(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The North Atlantic Right Whale is one of the most endangered whale species, with only about 350 individuals left. Found along the eastern coast of North America, it faces threats from ship strikes, entanglement in fishing gear, and habitat degradation. These baleen whales primarily feed on plankton and krill. Their natural habitat includes coastal waters, where they migrate between feeding and breeding areas. Conservation efforts focus on reducing ship collisions, fishing gear entanglements, and habitat protection.";
+            
+            }
+            function buttonclicktoo(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The Gray Wolf is a keystone predator found in parts of North America, especially in Alaska, Canada, and the northern United States. They are at risk due to hunting, habitat loss, and human-wildlife conflict. Gray wolves play a vital role in regulating ecosystems by controlling the population of herbivores, which helps maintain healthy vegetation. Their natural habitat includes forests, tundras, and grasslands. Conservation efforts focus on reintroducing them into certain regions, reducing hunting pressures, and improving coexistence with humans.";
+
+            }
+            function buttonclear(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The info here "
+            }
+            function buttonback(){
+            window.location.href = "codequest.html"
+            }
+          </script>
+          </body> 
+        </html>

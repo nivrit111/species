@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> Endangered Species in Asia </title>
+        <link rel="icon" href="icon.png">
+
+        <style>
+        body {
+            background-image: url("https://wildlifesos.org/wp-content/uploads/2022/04/biodiversity_rainforest_wikimedia_commons_rep_photo-1920x900.jpg");
+            color: rgb(255, 0, 0);
+            font-family: Arial, sans-serif;
+            margin-left: 220px;
+        }
+
+        .sidebar {
+            width: 200px;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            padding-top: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding-left: 20px;
+        }
+
+        .sidebar h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            display: block;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: white;
+            color: black;
+        }
+        .content {
+            margin-left: 220px; 
+            padding: 20px;
+            font-size:18px;
+        }
+        p{
+        background-color:yellow;
+        color:purple;
+        margin:50px;
+        margin-right:100px;
+        font-size:16.69px;
+       }
+       .images{
+       background-color:lightskyblue;
+       justify-content:center;
+    align-items:center;
+       }
+       img{
+       height:150px;
+       width:150px;
+       border-width:20px;
+       border-style:groove;
+       }
+       button{
+            height:50px;
+    font-size:1.2em;
+    color:white;
+    background-color:blue;
+    cursor:pointer;
+        }
+        </style>
+    </head>
+    <body> 
+        <div class="sidebar">
+            <h2>Navigation</h2>
+            <ul>
+                <li> <a href="speciescurrentlydangered.html">Top 5 Species Currently Endangered</a> </li>
+                <li> <a href="Buildingthesolution.html">Build Your Own Solution</a> </li>
+                <li> <a href="survey.html">A Survey</a> </li>
+
+            </ul>
+        </div>
+
+        <div class="content">
+            <h1>Endangered Species in Asia</h1>
+            <p>Welcome to the page dedicated to endangered species in Asia. You can navigate through various sections using the sidebar on the left.
+                Here is a <strong> Gallery </strong>
+            </p>
+            <center> 
+            <div class="images">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRPiMzDIGypTLuAY1OzxjSyn44qf9t6poAGuw&s">
+            <p> Sumartan Tiger </p>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTUutueGq6hos0KVJ-YNcuTBehC1KkRMV98hg&s">
+            <p> Asian Elephant </p>
+
+            <img src="https://image5.sixthtone.com/image/5/2/311.jpg">
+            <p> Yangtze Giant Softshell Turtle </p>
+
+            <img src="https://images.takeshape.io/86ce9525-f5f2-4e97-81ba-54e8ce933da7/dev/d950e9f9-955f-4fc3-b49a-139d097e34e5/Javan%20rhino%20iStock-1305319298%20resized.jpeg?auto=compress%2Cformat&w=1440">
+            <p> Javan Rhino </p>
+            </center> 
+           <center> <p id="Info"> The info here </p> </center>
+            </div> 
+        </div>
+        <center> 
+         <button onclick="buttonclick()"> Sumartan Tiger </button>
+         <button onclick="buttonclickaswell()"> Asian Elephant </button>
+         <button onclick="buttonclicktoo()">  Yangtze Giant Softshell Turtle </button> 
+         <button onclick="buttonclicknodoubt()"> Javan Rhino </button>
+         <button onclick="buttonclear()"> Clear </button>
+         <button onclick="buttonback()"> Home </button>
+          </center>
+         <script>
+            function buttonclick(){
+            const info = document.getElementById('Info')
+            info.textContent = "The Sumatran tiger (*Panthera tigris sumatrae*) is a critically endangered subspecies of tiger native to the island of Sumatra in Indonesia. It is endangered due to habitat loss from deforestation, poaching for its fur and body parts, and human-wildlife conflict. As an apex predator, it sits at the top of the food chain, primarily preying on ungulates and smaller mammals. The tiger's natural habitat includes tropical rainforests, mangrove swamps, and lowland forests. Conservation efforts are crucial to protect these tigers and their ecosystems, ensuring the survival of this unique subspecies.";
+             
+            }
+            function buttonclickaswell(){
+            const info = document.getElementById('Info')
+            info.textContent = "The Asian elephant (*Elephas maximus*) is a vulnerable species found across South and Southeast Asia. It faces threats from habitat loss, human-wildlife conflict, and poaching for ivory and skin. As a keystone species, it plays a crucial role in maintaining the ecosystem by dispersing seeds and modifying vegetation. Asian elephants are herbivores and are positioned at the top of the herbivore food chain. They inhabit forests, grasslands, and wetlands. Conservation efforts are needed to safeguard their habitats and reduce human-elephant conflicts to prevent further population decline.";
+            }
+            function buttonclicktoo(){
+            const info = document.getElementById('Info')
+            info.textContent = "The Javan rhino (*Rhinoceros sondaicus*) is a critically endangered species native to Indonesia, specifically found only in Ujung Kulon National Park in Java. It faces threats from habitat loss, poaching, and natural disasters. As a large herbivore, it occupies the lower levels of the food chain, primarily feeding on grasses, leaves, and fruit. The Javan rhino’s natural habitat is tropical rainforests and coastal wetlands. Conservation efforts focus on protecting their habitat and preventing poaching to ensure the survival of this extremely rare species. It is one of the most endangered large mammals in the world.";
+
+            }
+            function buttonclicknodoubt(){
+            const info = document.getElementById('Info')
+            info.textContent = "The Yangtze giant softshell turtle (*Rafetus swinhoei*) is one of the world's most endangered reptiles, with only a few known individuals remaining. Native to China and Vietnam, it faces critical threats from habitat destruction, pollution, and human encroachment. This freshwater turtle is primarily herbivorous, feeding on aquatic plants and invertebrates, and it occupies the lower levels of the food chain. The Yangtze giant softshell turtle’s natural habitat includes large rivers and wetlands. Conservation efforts are ongoing to protect its habitat and promote breeding, as the species is on the brink of extinction.";
+
+            }
+            function buttonclear(){
+            const info = document.getElementById('Info')
+            info.textContent = "The info here "
+            }
+            function buttonback(){
+            window.location.href = "codequest.html"
+            }
+         </script>
+    </body>
+</html>

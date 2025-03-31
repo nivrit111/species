@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" href="icon.png"> 
+        <title> Endangered Species </title>
+
+        <style>
+        body{
+        background-image:url("https://wildlifesos.org/wp-content/uploads/2022/04/biodiversity_rainforest_wikimedia_commons_rep_photo-1920x900.jpg");
+        display:flex;
+    justify-content:center;
+    align-items:center;
+    font-style:oblique;
+    font-family:Arial, Helvetica, sans-serif;
+    text-align:center;
+    color:white;
+    font-size:16px;
+        }
+        img {
+            width:1000px; 
+          height:669px;
+        }
+        button{
+            height:50px;
+    font-size:1.2em;
+    color:white;
+    background-color:blue;
+    cursor:pointer;
+        }
+        h1{
+        color:White;
+        font-size:40px;
+        }
+        .sidebar {
+            width: 200px;
+          background-color: black;
+            color: white;
+            height: 100vh;
+            padding-top: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding-left: 20px;
+        }
+
+        .sidebar h2 {
+            color: white;
+            text-align: center;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            display: block;
+        }
+
+        .sidebar ul li a:hover {
+            background-color: white;
+            color: black;
+        }
+        </style>
+    </head>
+    <body>
+        <div class="sidebar">
+            <h2> Navigation </h2>
+            <ul>
+            <li> <a href="speciescurrentlydangered.html"> Top 5 Species currently endangered </a> </li>
+            <br>
+            <li> <a href="Buildingthesolution.html"> Build your own solution </a></li>
+            <br>
+             <li> <a href="survey.html"> A survey </a></li>
+             <br>
+            </ul>
+        </div>
+      
+    <div class="map">
+        <h1> Endangered specie tracker </h1>
+        <p> Welcome to the Endangered Specie Tracker.
+             Here we will take a look at the species that
+              are <u> Endangered </u> and we'll discuss what we can do about it</p>
+     <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5zO0bDzjwyBMImNY1_rWchIXTISVcKU2sCQ&s">
+      <br> <br> 
+  <button class="navigateButton" data-target="asia.html"> Asia </button>
+  <button class="navigateButton" data-target="africa.html"> Africa </button>
+  <button class="navigateButton" data-target="northamerica.html"> North-America </button>
+  <button class="navigateButton" data-target="southamerica.html"> South-America </button>
+  <button class="navigateButton" data-target="antarctica.html"> Antarctica </button>
+  <button class="navigateButton" data-target="europe.html"> Europe </button>
+  <button class="navigateButton" data-target="oceania.html"> Oceania  </button>
+  <br> <br> 
+  <button onclick="buttonclick()"> Back to main page </button>
+    </div>
+    <script>
+   const buttons = document.querySelectorAll('.navigateButton');
+
+   buttons.forEach(button => {
+      button.addEventListener('click', function() {
+        const targetPage = button.getAttribute('data-target');
+        window.location.href = targetPage;
+      });
+    });
+    function buttonclick(){
+        window.location.href = "mainmenu.html"
+       }
+    </script>
+    </body>
+</html>

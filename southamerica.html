@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
+    <title>Endangered Species in South America </title>
+    <style> 
+        body {
+            background-image: url("https://wildlifesos.org/wp-content/uploads/2022/04/biodiversity_rainforest_wikimedia_commons_rep_photo-1920x900.jpg");
+            color: rgb(255, 0, 0);
+            font-family: Arial, sans-serif;
+            margin-left: 220px;
+        }
+        img {
+            width: 1000px; 
+            height: 669px;
+        }
+        button {
+            height: 50px;
+            font-size: 1.2em;
+            color: white;
+            background-color: blue;
+            cursor: pointer;
+            text-align:center;
+        }
+        h1 {
+            color: white;
+            font-size: 40px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            padding-top: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding-left: 20px;
+        }
+        .sidebar h2 {
+            color: white;
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            display: block;
+        }
+        .sidebar ul li a:hover {
+            background-color: white;
+            color: black;
+        }
+        .content {
+            margin-left: 220px; 
+            padding: 20px;
+            font-size:18px;
+        }
+        p{
+        background-color:yellow;
+        color:purple;
+        margin:50px;
+        margin-right:100px;
+        font-size:16.69px;
+       }
+       .images{
+       background-color:lightskyblue;
+       justify-content:center;
+    align-items:center;
+       }
+       img{
+       height:150px;
+       width:150px;
+       border-width:20px;
+       border-style:groove;
+       }
+    </style>
+</head>
+<body> 
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="speciescurrentlydangered.html">Top 5 Species Currently Endangered</a></li>
+            <li><a href="Buildingthesolution.html">Build Your Own Solution</a></li>
+            <li><a href="survey.html">A Survey</a></li>
+            
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1> Endangered Species in South America  </h1>
+        <p>Welcome to the page dedicated to endangered species in South America. You can navigate through various sections using the sidebar on the left.
+            Here is a <strong> Gallery </strong>
+        </p>
+        <center>
+        <div class="images">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThrNGBPwQQyoqEiRKdnPbvGqehiOEFiqM17Q&s">
+              <p> Jaguars  </p>
+              
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS3ESjXalZNfs99y-ej8AjaqqXiMkn3pF0WAw&s">
+            <p> Andean Condor  </p>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlgDOzdMWev41NkikqrDpvwujRdyQ9rE-tXA&s">
+            <p> Golden Poison Dart Frog </p>
+        </center> 
+            <center> <p id="Info"> The Info Here </p></center>
+           </div>
+           </div>
+            <center> 
+          <button onclick="buttonclick()"> Jaguars </button>
+          <button onclick="buttonclickaswell()"> Andean Condor  </button>
+          <button onclick="buttonclicktoo()"> Golden Poison Dart Frog  </button>
+          <button onclick="buttonclear()"> Clear </button>
+          <button onclick="buttonback()"> Home </button>
+            </center>
+          <script> 
+            function buttonclick(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "Jaguars are the largest cats in the Americas and are primarily found in the rainforests, grasslands, and wetlands of South and Central America. They face threats from habitat loss, poaching, and human-wildlife conflict. As apex predators, jaguars help maintain the balance of their ecosystems by controlling prey populations. Their natural habitat includes tropical forests, savannas, and wetlands. Conservation efforts focus on habitat protection, anti-poaching measures, and promoting human-jaguar coexistence.";
+            }
+            function buttonclickaswell(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The Andean Condor is a large vulture native to the high-altitude mountains of South America, particularly in the Andes. It is threatened by habitat destruction, poisoning from carcasses of poisoned livestock, and hunting. As a scavenger, the Andean condor plays an important ecological role in cleaning up dead animals. Its natural habitat includes mountains, cliffs, and open landscapes. Conservation efforts aim to reduce poisoning and habitat destruction while supporting the bird's population through protected areas.";
+            
+            }
+            function buttonclicktoo(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The Golden Poison Dart Frog, found in the rainforests of western Colombia, is one of the most toxic animals in the world. It is endangered due to habitat destruction, illegal pet trade, and pollution. These frogs primarily feed on ants and other small invertebrates and play a role in controlling insect populations. Their natural habitat includes humid tropical rainforests near rivers and streams. Conservation efforts focus on habitat protection and limiting the illegal pet trade to preserve their populations.";
+
+            }
+            function buttonclear(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The info here "
+            }
+            function buttonback(){
+            window.location.href = "codequest.html"
+            }
+          </script>
+          </body> 
+        </html>

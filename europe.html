@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="icon.png">
+    <title>Endangered Species in Europe </title>
+    <style> 
+        body {
+            background-image: url("https://wildlifesos.org/wp-content/uploads/2022/04/biodiversity_rainforest_wikimedia_commons_rep_photo-1920x900.jpg");
+            color: rgb(255, 0, 0);
+            font-family: Arial, sans-serif;
+            margin-left: 220px;
+        }
+        img {
+            width: 1000px; 
+            height: 669px;
+        }
+        button {
+            height: 50px;
+            font-size: 1.2em;
+            color: white;
+            background-color: blue;
+            cursor: pointer;
+            text-align:center;
+        }
+        h1 {
+            color: white;
+            font-size: 40px;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: black;
+            color: white;
+            height: 100vh;
+            padding-top: 20px;
+            position: fixed;
+            left: 0;
+            top: 0;
+            padding-left: 20px;
+        }
+        .sidebar h2 {
+            color: white;
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            margin: 20px 0;
+        }
+        .sidebar ul li a {
+            text-decoration: none;
+            color: white;
+            padding: 10px;
+            display: block;
+        }
+        .sidebar ul li a:hover {
+            background-color: white;
+            color: black;
+        }
+        .content {
+            margin-left: 220px; 
+            padding: 20px;
+            font-size:18px;
+        }
+        p{
+        background-color:yellow;
+        color:purple;
+        margin:50px;
+        margin-right:100px;
+        font-size:16.69px;
+       }
+       .images{
+       background-color:lightskyblue;
+       justify-content:center;
+    align-items:center;
+       }
+       img{
+       height:150px;
+       width:150px;
+       border-width:20px;
+       border-style:groove;
+       }
+    </style>
+</head>
+<body> 
+    <div class="sidebar">
+        <h2>Navigation</h2>
+        <ul>
+            <li><a href="speciescurrentlydangered.html">Top 5 Species Currently Endangered</a></li>
+            <li><a href="Buildingthesolution.html">Build Your Own Solution</a></li>
+            <li><a href="survey.html">A Survey</a></li>
+            
+        </ul>
+    </div>
+
+    <div class="content">
+        <h1> Endangered Species in Europe </h1>
+        <p>Welcome to the page dedicated to endangered species in Europe. You can navigate through various sections using the sidebar on the left.
+            Here is a <strong> Gallery </strong>
+        </p>
+        <center>
+        <div class="images">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/Lince_ib%C3%A9rico_%28Lynx_pardinus%29%2C_Almuradiel%2C_Ciudad_Real%2C_Espa%C3%B1a%2C_2021-12-19%2C_DD_07.jpg/220px-Lince_ib%C3%A9rico_%28Lynx_pardinus%29%2C_Almuradiel%2C_Ciudad_Real%2C_Espa%C3%B1a%2C_2021-12-19%2C_DD_07.jpg">
+              <p> Iberian Lynx </p>
+              
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRk36ixuOWoonVP2EC4uhzAc--oyREHxH0RWg&s">
+            <p> European Bison </p>
+
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSw7KwnI3KXcAgn4RDVFQY9uwFqWsqsQSlmsQ&s">
+            <p> Saimaa ringed seal </p>
+        </center> 
+            <center> <p id="Info"> The Info Here </p></center>
+           </div>
+           </div>
+            <center> 
+          <button onclick="buttonclick()"> Iberian Lynx  </button>
+          <button onclick="buttonclickaswell()"> European Bison  </button>
+          <button onclick="buttonclicktoo()"> Saimaa ringed seal </button>
+          <button onclick="buttonclear()"> Clear </button>
+          <button onclick="buttonback()"> Home </button>
+            </center>
+          <script> 
+            function buttonclick(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The Iberian Lynx is found in the Iberian Peninsula (Spain and Portugal). It faces threats from habitat loss, hunting, and the depletion of its primary prey, the rabbit. As a top predator, it plays a crucial role in controlling prey populations. Its natural habitat includes Mediterranean forests and shrublands. Conservation efforts, including breeding programs and habitat restoration, have led to a population recovery, though it remains endangered.";
+
+
+            }
+            function buttonclickaswell(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The European Bison is a large herbivore found in forests of Eastern Europe. It was once on the brink of extinction but has seen successful reintroduction efforts. The species faces threats from habitat fragmentation, disease, and inbreeding. European bison primarily feed on grasses and shrubs. Their natural habitat includes forested areas and grasslands. Conservation programs focus on maintaining genetic diversity, reintroducing bison into the wild, and protecting their habitats.";
+            
+            }
+            function buttonclicktoo(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The Saimaa Ringed Seal is a freshwater subspecies of the ringed seal found only in Lake Saimaa in Finland. It faces threats from habitat loss, climate change, and human activities like boating and fishing. These seals primarily feed on fish and invertebrates. Their natural habitat includes the cold, freshwater waters of Lake Saimaa. Conservation efforts focus on habitat protection, reducing human-induced threats, and increasing the seal's population.";
+
+            }
+            function buttonclear(){
+            const Info = document.getElementById('Info')
+            Info.textContent = "The info here "
+            }
+            function buttonback(){
+            window.location.href = "codequest.html"
+            }
+          </script>
+          </body> 
+        </html>
